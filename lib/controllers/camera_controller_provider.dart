@@ -24,6 +24,7 @@ class CameraControllerProvider extends ChangeNotifier {
   });
 
   Future<void> initialize() async {
+    if (_controller != null) return;
     if (_isInitializing) return;
     _isInitializing = true;
 
